@@ -1,0 +1,551 @@
+
+Exercice 1 : 
+Var a ,b,rt,qe : entrier 
+ qr : reel 
+
+Debut 
+
+ Repeter 
+       Ecrire ‘’entrer un nombre ‘’ 
+Lire a 
+Jusqu’à (a > 0)
+
+Repeter 
+       Ecrire  ‘’entrer un nombre ‘’ 
+Lire b 
+
+Jusqu’à (b > 0)
+
+Rt <- a mod b
+qe <-  a div b
+qr <-  a / b
+      Ecrire  ‘’les quotient entier’’, qe 
+      Ecrire  ‘’les quotient reel ‘’ qr 
+Ecrire  ‘’ le reste est ‘’ , rt 
+
+Fin
+Exercice 2: 
+var surf ,pi ,prm , r = reel 
+Debut 
+Repeter 
+           Ecrire ‘’entrer le rayon‘’ ;
+Lire r ;
+Jusqu’à (r > 0)
+pi = 4 *( atan  * 1)
+
+       prm  <-  r  * pi * 2
+
+surf  <-  pi * sqrt(r)
+Fin
+
+
+Exercice 3 version 1: 
+  var R1 ,R2,R3 , rserie, rpara : reel 
+Debut 
+                   Ecrire ‘’ entre la resistance R1 ‘’ ;
+                       lire R1 ;   
+                   Ecrire ‘’ entre la resistance R2 ‘’ ;
+                      lire R2;   
+                  Ecrire ‘’ entre la resistance R2 ‘’ ;
+                      lire R2 ;   
+rserie <- R1 + R2 +R3
+rpara  <- (R1 *R2 *R3) / (R1 * R2 + R2 * R3 + R1 * R3)
+Ecrire   ‘’ la résistance en série est : ‘’, rserie
+Ecrire ‘’ la résistance en parallèle  est : ‘’, rpara 
+Fin
+Exercice 3 version 2 : 
+  var R1 ,R2,R3 , rserie, rpara, frqserie, frqpara : reel 
+  var choix : entier
+Debut 
+  Ecrire ‘’ entre la resistance R1 ‘’ 
+   lire R1 ;   
+  Ecrire ‘’ entre la resistance R2 ‘’ 
+   lire R2;   
+  Ecrire ‘’ entre la resistance R2 ‘’ 
+   lire R2 ;   
+rserie <- R1 + R2 +R3
+rpara <- (R1 *R2 *R3) / (R1 * R2 + R2 * R3 + R1 * R3)
+Repeter 
+
+Ecrire ‘’faites votre choix
+1 ->  fréquence en série
+2 - > fréquence en parallèle  ‘’ 
+Lire choix 
+
+Jusqu’à (choix  >=1  ou choix  <= 2 )
+
+
+Si(choix  == 1) alors 
+
+   Frqserie <- (R1 / Rserie) + (R2 / Rserie) + ( R3 / Rserie) 
+   Ecrire ‘’ la fréquence en serie est : ’’, Frqserie
+
+                                Sinon 
+   frqpara  <- (R1 / frqpara ) + (R2 / frqpara ) + ( R3 / frqpara ) 
+   Ecrire ‘’ la fréquence en parallèle  est : ’’, frqpara 
+Finsi
+
+Fin
+
+EXO 4 : 
+var x , puiss , cpt1  : reel 
+n , i: entier
+Debut 
+//version 1 
+       Ecrire ‘’ entre un nombre  entier ‘’
+       Lire n
+Ecrire ‘’ entrer un nombre reel ‘’
+Lire x 
+Ecrire   x, ‘’ a la puissance ‘’,n, ‘’ est : ‘’ ,pow(x,n)
+
+// version 2 	
+	puiss  <-  1
+	Pour i allant de 1 à n  Faire 
+		puiss <-  puiss * x
+	Finpour
+Ecrire ‘’ x, ‘’ a la puissance ,n, ‘’ est : ‘’ puiss  
+
+Exo 5 :
+var i , somme ,val : entier 
+const n  = 5 
+Debut 
+      somme <- 0
+Pour i allant de 1 a n faire 
+Ecrire ‘’ entrer un nombre entier ‘’ 
+Lire val
+somme <- somme + val     // 0 <- 0 + 5 
+Finpour
+Afficher ‘’ la somme des 5 valeurs est : ‘’, somme
+Fin
+Exo 6 : 
+Debut 
+Var x1, y1, x2, y2 : reel 
+  Ecrire ‘’ entrer les coordonnées du point A ‘’ 
+  Lire  x1, y1
+ Ecrire ‘’ entrer les coordonnées du point B ‘’ 
+  Lire  x2, y2
+Ecrire ‘’ la distance entre A et B est ‘’, sqrt((x1 – x2)2  + (y1 – y2)2)
+Exo : 7 
+Var  montant, billet20, billet10, billet5, piece2, piece1 , rest1,rest2,rest3,rest4 : reel 
+
+Debut 
+Repeter 
+Afficher ‘’ entrer un montant ‘’
+Lire montant
+Jusqu’à (montant > 0) 
+rest <- 0
+
+//215
+billet20  <- ( montant div  20)
+rest <- ( montant mod  20)
+billet10  <- ( rest  div  10)
+rest <- ( rest mod  10)
+billet5 <- ( rest  div  5)  
+rest <- ( rest mod  5)
+priece2 = ( rest  div  2)
+piece1 <- ( rest mod  2)   
+
+Exo 8 :
+Var a,b,c , delta , x1, x2: reel 
+Debut 
+              Afficher ‘’ entrer les donnees de l’equation ’’
+Lire a,b,c 
+delta = b*b - 4*a*c 
+Si (delta < 0) alors 
+       Afficher  ‘’Pas de solution dans l’ensemble R’’
+     Sinon si (delta = 0) alors 
+    x1 <-  (  -b/(2*a)
+    Afficher "une solution double : " + x1 
+           sinon 
+ x1 <- (-b - sqrt(delta))/2*a 
+ x2 <-  (-b + sqrt(delta))/2*a 
+                    Finsi
+              Finsi
+Afficher "deux solutions distinctes " + x1 + " et " + x2
+Fin
+
+
+Exo 9 :
+Var hh1,mn1,ss1,hh2,mn2,ss2,nbrss1,nbrss2,difference, reste, difhh, difmn,ds : entier
+Debut 
+REPETER
+      Ecrire ‘’ Entrer l’heure de depart’’
+       Saisir hh1,mn1,ss1
+JUSQU’A (hh1 > 0 et hh1 < 24 et mn1 > 0 et mm1 < 60 et ss1 > 0 et ss1 < 60 )
+
+REPETER
+      Ecrire ‘’ Entrer l’heure d’arrivé’’
+       Saisir hh2,mn2,s2
+JUSQU’A (hh2 > 0 ET hh2 < 24 ET hh2 ET mn2 > 0 ET mm2 < 60 ET ss2  > 0 ET ss2 < 60 )
+nbrssD  <- hh1 *60 *60 + mm1 * 60 + ss1 
+nbrssA  <- hh2 *60 *60 + mm1 * 60 + ss1
+//version a
+Si( hh2 >  hh1 )
+difference  <- NbrssA  - NbrssD
+dhh  <- difference   div 60  * 60
+reste <- difference   mod 60  * 60
+dmn <- reste div 60  
+dss <- reste   mod 60  
+               Ecrire ‘’ la durée du vol si le depart et l’arrivee 
+                      se tiennent à la meme journée est : ‘’ , dhh, ‘’ :’’,dmn,’’ :’’,dss
+//version b
+Sinon 
+difference  <- nbrssD  - nbrssA
+dhh  <- difference   div 3600
+reste <- difference   mod 3600
+dmn <- reste div 60  
+dss <- reste   mod 60  
+         Ecrire ‘’ la durée du vol si le l’arrivee 
+                      se tienne le lendemain est : ‘’ , dhh, ‘’ :’’,dmn,’’ :’’,dss
+
+   Finsi
+Fin
+
+Exo 10: 
+Var A , B, C : entier 
+DEBUT 
+   AFFICHER  ‘’ Entrer les valeurs à comparer’’
+      LIRE A,B,C
+  SI (A > B et B > C ) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,A , ‘’,’’,B,’’ et ‘’,C
+ FINSI 
+   SI (A > B et C > B) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,A , ‘’,’’,C,’’ et ‘’,B
+   FINSI 
+   SI (B > A et A > C) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,B , ‘’,’’,A,’’ et ‘’,C
+   FINSI 
+   SI (B > C et C > A) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,B , ‘’,’’,C,’’ et ‘’,A
+   FINSI 
+   SI (C > A et A > B) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,C , ‘’,’’,A,’’ et ‘’,B
+   FINSI 
+   SI (C > B et B > A) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,C , ‘’,’’,B,’’ et ‘’,A
+   FINSI 
+
+
+Exercice 11 :
+Ecrire un algorithme calculatrice permettant la saisie du premier entier (a) de l'opération ( + ou – ou * ou / : sont des caractères) et du deuxième entier (b) et qui affiche le résultat.
+
+Var a, b , somme, difference, multi, resultat  : entier
+
+operateur : caractere 
+
+DEBUT 
+	
+AFFICHER ("saisir le premier nombre") ;
+LIRE a
+
+AFFICHER ("saisir le deuxième nombre") ;
+LIRE b
+
+REPETER
+ECRIRE "Choisir l’operateur "
+
+JUSQU’A (operateur  = '-' OU operateur  = '+' OU operateur  = '*' OU operateur  = '/') 
+
+SI (operateur = '-' ALORS
+difference ← a - b 
+FINSI
+SI (operateur = '+') ALORS
+somme ← a + b ;
+FINSI
+SI (operateur = '*') ALORS
+multi ← a * b ;
+FINSI
+SI (operateur = '/' ET b!=0) ALORS
+resultat ← a div b ;
+FINSI
+AFFICHER (" le resultat est : ",result);
+FIN
+
+
+Exo 12 : 
+VAR nbr , i , parfait, diviseur : entier
+DEBUT 
+REPETER 
+    AFFICHER ‘’ Entrer un nombre ‘’	
+         SAISIR nbr 
+JUSQU’A ( nbr > 0) 
+  diviseur  <- 0 
+       POUR i allant de 1 a nbr -1 FAIRE 
+               SI ( nbr mod i = 0) ALORS 
+                       diviseur <- diviseur + i 
+               FINSI 
+       FINPOUR
+
+             SI (diviseur = nbr) ALORS 
+                ECRIRE nbr,’’ est un nombre parfait ‘’
+                    SINON 
+                         ECRIRE nbr,’’ n’est pas un nombre parfait ‘’
+             FINSI
+FIN
+Exo 13 :  
+Var jour, mois, annee : entier 
+
+     AFFICHER ‘’ entre le jour , le mois et l’année ‘’ 
+             LIRE jour,mois,annee 
+SI ( jour < 1 ) ou (jour > 31 ) ou (mois < 1 ou mois >12)  
+    ou ((mois =2 ) et (((jour  >29 et (annee mod 4 = 0 )) ou ((jour  >  28 et (annee mod 4 != 0)))) Alors 
+          AFFICHER ‘’ la date est incorect ‘’, jour,’’jj’’,mois ,‘’m’’ ,annee
+
+Sinon 
+AFFICHER ‘’ la date saisi est correct ‘’
+Finsi
+
+Exercice 14 : Faire un programme qui saisit une date (jour, mois et année) at qui indique si l’année est bissextile 
+
+Var jour, mois, annee ,anneeB: entier 
+
+     AFFICHER ‘’ entre le jour , le mois et l’année ‘’ 
+             LIRE jour,mois,annee 
+anneeB <- 0 
+SI ( jour < 1 ) ou (jour > 31 ) ou (mois < 1 ou mois >12)  
+    ou ((mois =2 ) et (((jour  > 29 et (annee mod 4 = 0 )) ou ((jour  >  28 et (annee mod 4 != 0)))) Alors 
+          AFFICHER ‘’ la date est incorect ‘’, jour,’’jj’’,mois ,‘’m’’ ,annee
+
+Sinon 
+   Si(annee mod 4 = 0 ) alors
+        anneeB  <- annee
+       AFFICHER   anneeB  ,‘’ est bissextile  ‘’
+       Sinon
+                 AFFICHER   annee,‘’ n’est bissextile  ‘’      
+     finsi
+Finsi
+
+Exercice 15 : 
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule la somme des entiers jusqu'à ce nombre. Par exemple si l'on tape 4 , l’algorithme doit calculer: 1 + 2 + 3+ 4 = 10 Réécrire l'algorithme qui calcule cette fois la moyenne !
+
+Var nbr, somme ,i : entier 
+
+DEBUT 
+REPETER
+    AFFICHER ‘’ Entrer un nombre ‘’ 
+      Lire  nbr
+JUSQU’A
+somme  <- 0
+ POUR i allant de 1 a nbr FAIRE
+      somme  <- somme + i
+FINPOUR
+AFFICHER ‘’ La somme de 1 à ‘’,nbr ,’’ est : ‘’ somme 
+
+
+Exercice 16 : Faire un programme qui calcule et affiche la division de a par b par soustractions successives
+
+Exercice 17: Faire un programme qui calcule le PGCD de deux nombres saisis au clavier en utilisant l'astuce suivante: soustrait le plus petit des deux entiers du plus grand jusqu'à ce qu'ils soient égaux.
+var a,b,x,y,r : entier 
+
+REPETER 
+   AFFICHER  " entrer deux valeur " 
+lire a,b 
+JUSQU'A ( a >= 0 ET b >= 0 )  
+
+ SI ( a > b ) ALORS   // 84 60
+   x = b    //   x =    60
+   r = a mod b  // r = 24
+    SINON 
+     x = a 
+     r = b mod a
+ FINSI
+
+    TANQUE r != 0 
+        y = x   //   60    24
+        x = r    //  24     12
+        r = y mod x  //  12    12  0
+   
+    FINTANQUE 
+
+AFFICHER " le pgcd de ",a ," et", b ,"est : "x
+
+Exercice 18: Faire un programme qui calcule et affiche le PPCM de deux entiers saisis au clavier.
+var a,b,x,y,r : entier 
+
+REPETER 
+   AFFICHER  " entrer deux valeur " 
+lire a,b 
+JUSQU'A ( a >= 0 ET b >= 0 )  
+
+ SI ( a > b ) ALORS 
+   x = b  
+   r = a mod b  
+    SINON 
+     x = a 
+   r = b mod a
+ FINSI
+
+    TANQUE r != 0 
+        y = x     
+        x = r      
+        r = y mod x  
+   
+    FINTANQUE 
+
+AFFICHER " le pgcd de ",a ," et", b ,"est : "x
+
+AFFICHER " le ppcm de ",a ," et", b ,"est : "(a * b ) div x
+
+Exercice 19 : Ecrire l’algorithme qui affiche la somme des prix d'une suite d'articles en CFA (entiers) saisies par l'utilisateur et se terminant par zéro.
+Type tab : Tableau [ 1    10 ] : entier
+Var n , i , somme : entier 
+REPETER 
+   AFFICHER " Entrer le nombre d’article " 
+      LIRE n 
+  JUSQU’A ( n > 0 )
+POUR i allant de 1 à n FAIRE 
+          AFFICHER " Entrer Le prix de l’article numero ", i
+                 LIRE tab[i]
+ FINPOUR
+somme < - 0 
+POUR i allant de 1 à n – 1 FAIRE 
+      SI (tab[i] mod 10 = 0 ) ALORS
+            somme <- somme + tab[i]
+      FINSI
+FINPOUR 
+  AFFICHER " la somme des prix d’article est : ",somme 
+FIN 
+
+Exercice 20 : Ecrire un algorithme qui demande successivement 10 nombres à l'utilisateur, et qui affiche à la fin le plus grand de ces 10 nombres Et affiche aussi son rang dans la liste saisie
+Type tab : Tableau [ 1    10 ] : entier
+Var  i , max, position : entier 
+POUR i allant de 1 à 10 FAIRE 
+          AFFICHER " Entrer  un nom"
+                 LIRE tab[i]
+ FINPOUR
+max <- 0 
+  position <- 0
+POUR i allant de 1 à 10  FAIRE 
+             SI (tab[i] > max)
+                  max <- tab[i]
+                   position <- i 
+              FINSI
+ FINPOUR
+FIN 
+Exercice 21 : Ecrire un algorithme mettant en œuvre le jeu suivant entre deux joueurs : Le premier utilisateur saisi un entier que le second doit deviner. Pour cela, il a le droit à autant de tentatives qu'il souhaite. A chaque échec, le programme lui indique si l'entier est plus grand ou plus petit que sa proposition. Un score est affiché lorsque l'entier est trouvé.
+
+Var : a, n, t : entiers
+
+Début 
+t=0
+choix = 0
+score = 0 
+  ECRIRE "entre le nombre  à deviner "
+       lire a
+
+TANQUE ( choix != 2)
+
+   ECRIRE "deviné le nombre "
+       lire (n)
+      t <- t + 1
+  Si n > a ALORS
+
+     ECRIRE "le nombre cherché est plus petit "
+
+    SINON SI  n < a ALORS
+      ECRIRE  " le nombre cherché plus grand »)
+        SINON 
+            score = score +1
+                ECRIRE  "Vous avez trouvé le nombre et votre score est :",score," sur" ,t, "tentatives"
+ REPETER
+       ECRIRE  "voulez vous continué 
+                        1 : oui
+                         2 : non "
+                    LIRE  choix
+JUSQU’A ( choix = 1 ou choix = 2) 
+ SI ( choix = 1)
+                 ECRIRE "Entrer le nombre à deviné "
+                 lire a
+       SINON 
+                Choix = 2
+   FINSI  
+    FINSI  
+   FINSI  
+
+FINTANQUE
+FIN
+Exercice 24: Nombre secret : écrire un programme qui demande à l’utilisateur 1 d’entrer un nombre et à l’utilisateur 2 de le trouver en affichant, à chaque tentative, « trop grand » si le nombre entré est plus grand que le nombre secret, « trop petit » sinon. Le programme s’arrête quand l’utilisateur 2 a trouvé le nombre secret.
+Var : a, n, t : entiers
+
+Début 
+  ECRIRE "entre le nombre  à deviner "
+       lire a
+
+TANQUE ( a != n )
+
+   ECRIRE "deviné le nombre "
+       lire (n)
+  SI a > n ALORS
+
+     ECRIRE " trop petit "
+    SINON  
+      ECRIRE " trop grand "
+   FINSI  
+FINTANQUE
+FIN
+
+Exercice 25 : Ecrire le code C du programme qui affiche le texte suivant pour les chiffres de 1 à 10 :
+1 
+2 2 
+3 3 3
+Ecrire un programme qui saisit un nombre et qui dit si ce nombre est premier ou pas.
+•	Partie 1
+Var i , j : entier
+
+DEBUT 
+      POUR i allant de 1 à 10 FAIRE 
+           POUR j allant de 1 à i FAIRE 
+                    Lire i 
+          FINPOUR 
+       FINPOUR
+FIN
+•	Partie 	2 nombre premier 
+
+Var nbr, premier, i
+DEBUT 
+           ECFRIRE " Entrer un nombre "
+                  LIRE nbr  
+POUR i allant de 1 à nbr – 1 FAIRE 
+          SI (nbr mod i = 0) ALORS 
+                 cpt = cpt +1 
+          FIN   
+          SI ( cpt = 1 ) ALORS 
+               ECFRIRE " le nombre ", nbr, "est premier "
+          FINSI 
+
+FINPOUR 
+
+Exercice 26 : Faire un programme qui saisit une suite de nombre et qui dit les si les nombres saisis sont dans l’ordre croissant ou décroissant ou quelconque.
+
+const N =10 
+type tab = tableau [1         N ] : reel 
+var i : entier
+DEBUT  
+   POUR i allant de 1 à N FAIRE 
+          LIRE tab[i] 
+  FINPOUR 
+croissant < - FAUX
+decroissant < - FAUX
+  POUR i allant de 1 à N faire
+       SI ( tab [i] < tab [i] + 1) ALORS
+            croissant < - vrai
+          SINON 
+               decroissant  < - faux
+       FINSI
+   FINPOUR 
+SI ( croissant = vrai ) ALORS
+     ECRIRE  " la suite de saisi est croissante "
+ FINSI
+  SINON SI (decroissant = vrai ) ALORS
+     ECRIRE  " la suite de saisi est decroissante "
+       SINON
+                   ECRIRE  " la suite de saisi n’est ni croissante  ni decroissante "
+ FINSI
+
+      
+
+
+
+
+
+
