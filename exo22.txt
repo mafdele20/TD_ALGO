@@ -19,15 +19,15 @@ DEBUT
 	           position <- 0 ;  
                max_seq <- 0 ; 
                seq_prec <- 0
-	long-seq <- 1 ;
+	   long-seq <- 1 ;
 	POUR (i  1 à N) faire
 		 SI (Tab[i] < = Tab [i + 1] ALORS      
                                 long-seq  <- long-seq +1 ;     
           SINON          
              SI (max_seq < long_seq) ALORS  
- 				max_seq  <- long_seq ; 
-                seq_prec <- seq_prec + long_seq ;
-				position <- seq_prec - long_seq + 1
+ 		         max_seq  <- long_seq ; 
+                     seq_prec <- seq_prec + long_seq ;
+		         position <- seq_prec - long_seq + 1
              FINSI
 		     long_seq <- 1 ; 
        FINSI
