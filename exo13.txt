@@ -1,0 +1,12 @@
+Exo 13 :  
+Var jour, mois, annee : entier 
+
+     AFFICHER ‘’ entre le jour , le mois et l’année ‘’ 
+             LIRE jour,mois,annee 
+SI ( jour < 1 ) ou (jour > 31 ) ou (mois < 1 ou mois >12)  
+    ou ((mois =2 ) et (((jour  >29 et (annee mod 4 = 0 )) ou ((jour  >  28 et (annee mod 4 != 0)))) Alors 
+          AFFICHER ‘’ la date est incorect ‘’, jour,’’jj’’,mois ,‘’m’’ ,annee
+
+Sinon 
+AFFICHER ‘’ la date saisi est correct ‘’
+Finsi

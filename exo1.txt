@@ -1,0 +1,23 @@
+
+Var a ,b,rt,qe : entrier 
+ qr : reel 
+
+REPETER 
+       Ecrire ‘’entrer un nombre ‘’ 
+Lire a 
+JUSQU'A (a > 0)
+
+REPETER 
+       Ecrire  ‘’entrer un nombre ‘’ 
+Lire b 
+
+JUSQU'A (b > 0)
+
+Rt <- a mod b
+qe <-  a div b
+qr <-  a / b
+      Ecrire  ‘’les quotient entier’’, qe 
+      Ecrire  ‘’les quotient reel ‘’ qr 
+Ecrire  ‘’ le reste est ‘’ , rt 
+
+FIN

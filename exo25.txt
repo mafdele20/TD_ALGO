@@ -1,0 +1,30 @@
+Exercice 25 : Ecrire le code C du programme qui affiche le texte suivant pour les chiffres de 1 à 10 :
+1 
+2 2 
+3 3 3
+Ecrire un programme qui saisit un nombre et qui dit si ce nombre est premier ou pas.
+•	Partie 1
+Var i , j : entier
+
+DEBUT 
+      POUR i allant de 1 à 10 FAIRE 
+           POUR j allant de 1 à i FAIRE 
+                    Lire i 
+          FINPOUR 
+       FINPOUR
+FIN
+•	Partie 	2 nombre premier 
+
+Var nbr, premier, i
+DEBUT 
+           ECFRIRE " Entrer un nombre "
+                  LIRE nbr  
+POUR i allant de 1 à nbr – 1 FAIRE 
+          SI (nbr mod i = 0) ALORS 
+                 cpt = cpt +1 
+          FIN   
+          SI ( cpt = 1 ) ALORS 
+               ECFRIRE " le nombre ", nbr, "est premier "
+          FINSI 
+
+FINPOUR 

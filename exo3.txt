@@ -1,0 +1,47 @@
+Exercice 3 version 1: 
+  var R1 ,R2,R3 , rserie, rpara : reel 
+Debut 
+                   Ecrire ‘’ entre la resistance R1 ‘’ ;
+                       lire R1 ;   
+                   Ecrire ‘’ entre la resistance R2 ‘’ ;
+                      lire R2;   
+                  Ecrire ‘’ entre la resistance R2 ‘’ ;
+                      lire R2 ;   
+rserie <- R1 + R2 +R3
+rpara  <- (R1 *R2 *R3) / (R1 * R2 + R2 * R3 + R1 * R3)
+Ecrire   ‘’ la résistance en série est : ‘’, rserie
+Ecrire ‘’ la résistance en parallèle  est : ‘’, rpara 
+Fin
+Exercice 3 version 2 : 
+  var R1 ,R2,R3 , rserie, rpara, frqserie, frqpara : reel 
+  var choix : entier
+Debut 
+  Ecrire ‘’ entre la resistance R1 ‘’ 
+   lire R1 ;   
+  Ecrire ‘’ entre la resistance R2 ‘’ 
+   lire R2;   
+  Ecrire ‘’ entre la resistance R2 ‘’ 
+   lire R2 ;   
+rserie <- R1 + R2 +R3
+rpara <- (R1 *R2 *R3) / (R1 * R2 + R2 * R3 + R1 * R3)
+Repeter 
+
+Ecrire ‘’faites votre choix
+1 ->  fréquence en série
+2 - > fréquence en parallèle  ‘’ 
+Lire choix 
+
+Jusqu’à (choix  >=1  ou choix  <= 2 )
+
+
+Si(choix  == 1) alors 
+
+   Frqserie <- (R1 / Rserie) + (R2 / Rserie) + ( R3 / Rserie) 
+   Ecrire ‘’ la fréquence en serie est : ’’, Frqserie
+
+                                Sinon 
+   frqpara  <- (R1 / frqpara ) + (R2 / frqpara ) + ( R3 / frqpara ) 
+   Ecrire ‘’ la fréquence en parallèle  est : ’’, frqpara 
+Finsi
+
+Fin

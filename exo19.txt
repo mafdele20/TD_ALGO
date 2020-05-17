@@ -1,0 +1,20 @@
+
+Exercice 19 : Ecrire l’algorithme qui affiche la somme des prix d'une suite d'articles en CFA (entiers) saisies par l'utilisateur et se terminant par zéro.
+Type tab : Tableau [ 1    10 ] : entier
+Var n , i , somme : entier 
+REPETER 
+   AFFICHER " Entrer le nombre d’article " 
+      LIRE n 
+  JUSQU’A ( n > 0 )
+POUR i allant de 1 à n FAIRE 
+          AFFICHER " Entrer Le prix de l’article numero ", i
+                 LIRE tab[i]
+ FINPOUR
+somme < - 0 
+POUR i allant de 1 à n – 1 FAIRE 
+      SI (tab[i] mod 10 = 0 ) ALORS
+            somme <- somme + tab[i]
+      FINSI
+FINPOUR 
+  AFFICHER " la somme des prix d’article est : ",somme 
+FIN 

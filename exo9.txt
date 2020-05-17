@@ -1,0 +1,35 @@
+Exo 9 :
+Var hh1,mn1,ss1,hh2,mn2,ss2,nbrss1,nbrss2,difference, reste, difhh, difmn,ds : entier
+DEBUT  
+    REPETER
+        Ecrire ‘’ Entrer l’heure de depart’’
+        Saisir hh1,mn1,ss1
+    JUSQU’A (hh1 > 0 et hh1 < 24 et mn1 > 0 et mm1 < 60 et ss1 > 0 et ss1 < 60 )
+
+    REPETER
+        Ecrire ‘’ Entrer l’heure d’arrivé’’
+        Saisir hh2,mn2,s2
+    JUSQU’A (hh2 > 0 ET hh2 < 24 ET hh2 ET mn2 > 0 ET mm2 < 60 ET ss2  > 0 ET ss2 < 60 )
+   nbrssD  <- hh1 *60 *60 + mm1 * 60 + ss1 
+   nbrssA  <- hh2 *60 *60 + mm1 * 60 + ss1
+    //version a
+ Si( hh2 >  hh1 )
+    difference  <- NbrssA  - NbrssD
+    dhh  <- difference   div 60  * 60
+    reste <- difference   mod 60  * 60
+    dmn <- reste div 60  
+    dss <- reste   mod 60  
+                Ecrire ‘’ la durée du vol si le depart et l’arrivee 
+                        se tiennent à la meme journée est : ‘’ , dhh, ‘’ :’’,dmn,’’ :’’,dss
+    //version b
+    Sinon 
+    difference  <- nbrssD  - nbrssA
+    dhh  <- difference   div 3600
+    reste <- difference   mod 3600
+    dmn <- reste div 60  
+    dss <- reste   mod 60  
+         Ecrire ‘’ la durée du vol si le l’arrivee 
+                      se tienne le lendemain est : ‘’ , dhh, ‘’ :’’,dmn,’’ :’’,dss
+
+ Finsi
+Fin

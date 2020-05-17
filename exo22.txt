@@ -1,0 +1,36 @@
+Exercice 22 : On se propose de saisir N entiers différents entre 1 et 100 (N étant un entier naturel compris entre 10 et 50) puis afficher la plus longue séquence croissante tout en précisant la position du premier nombre de cette séquence.
+Exemple : Pour N=15
+ 1  2  3  1  2  3  4  5  6  7  8  2  3  4  5 
+Le programme affiche :
+La plus longue séquence est 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 *   qui débute à la position 4  et elle est de longueur 7
+          Type  Tab : tableau [1……….N]  entier
+	var     i, long_seq , long_max, position, seq_precn, N : entier
+DEBUT
+            REPETER
+		Ecrire " Entrer un nombre entier compris entre 10 et 50 "
+		Lire (N) ;
+            JUSQU’A (N >10 ou N < 50)
+             POUR (i  1 à N) faire
+                       REPETER 
+	         	        Ecrire  " Entrer un nombre entier compris entre 1 et 100 "
+                                        Lire (Tab[i]) ;
+                      JUSQU’A (Tab[i]  > 1 ou Tab[i]  < 100)
+  FINPOUR
+	           position <- 0 ;  
+               max_seq <- 0 ; 
+               seq_prec <- 0
+	long-seq <- 1 ;
+	POUR (i  1 à N) faire
+		 SI (Tab[i] < = Tab [i + 1] ALORS      
+                                long-seq  <- long-seq +1 ;     
+          SINON          
+             SI (max_seq < long_seq) ALORS  
+ 				max_seq  <- long_seq ; 
+                seq_prec <- seq_prec + long_seq ;
+				position <- seq_prec - long_seq + 1
+             FINSI
+		     long_seq <- 1 ; 
+       FINSI
+  FINPOUR
+FIN
+

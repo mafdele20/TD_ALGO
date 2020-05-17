@@ -1,0 +1,16 @@
+Exercice 20 : Ecrire un algorithme qui demande successivement 10 nombres à l'utilisateur, et qui affiche à la fin le plus grand de ces 10 nombres Et affiche aussi son rang dans la liste saisie
+Type tab : Tableau [ 1    10 ] : entier
+Var  i , max, position : entier 
+POUR i allant de 1 à 10 FAIRE 
+          AFFICHER " Entrer  un nom"
+                 LIRE tab[i]
+ FINPOUR
+max <- 0 
+  position <- 0
+POUR i allant de 1 à 10  FAIRE 
+             SI (tab[i] > max)
+                  max <- tab[i]
+                   position <- i 
+              FINSI
+ FINPOUR
+FIN 

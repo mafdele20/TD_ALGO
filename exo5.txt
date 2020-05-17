@@ -1,0 +1,12 @@
+Exo 5 :
+var i , somme ,val : entier 
+const n  = 5 
+Debut 
+      somme <- 0
+   Pour i allant de 1 a n faire 
+       Ecrire ‘’ entrer un nombre entier ‘’ 
+           Lire val
+       somme <- somme + val     // 0 <- 0 + 5 
+    Finpour
+    Afficher ‘’ la somme des 5 valeurs est : ‘’, somme
+Fin

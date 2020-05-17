@@ -1,0 +1,24 @@
+Exo 10: 
+Var A , B, C : entier 
+DEBUT 
+   AFFICHER  ‘’ Entrer les valeurs à comparer’’
+      LIRE A,B,C
+  SI (A > B et B > C ) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,A , ‘’,’’,B,’’ et ‘’,C
+ FINSI 
+   SI (A > B et C > B) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,A , ‘’,’’,C,’’ et ‘’,B
+   FINSI 
+   SI (B > A et A > C) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,B , ‘’,’’,A,’’ et ‘’,C
+   FINSI 
+   SI (B > C et C > A) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,B , ‘’,’’,C,’’ et ‘’,A
+   FINSI 
+   SI (C > A et A > B) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,C , ‘’,’’,A,’’ et ‘’,B
+   FINSI 
+   SI (C > B et B > A) ALORS 
+      AFFICHER ‘’ dans l’ordre on a ‘,C , ‘’,’’,B,’’ et ‘’,A
+   FINSI 
+

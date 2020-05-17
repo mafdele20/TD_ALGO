@@ -1,0 +1,17 @@
+ EXO 4 : 
+var x , puiss , cpt1  : reel 
+n , i: entier
+Debut 
+//version 1 
+       Ecrire ‘’ entre un nombre  entier ‘’
+       Lire n
+Ecrire ‘’ entrer un nombre reel ‘’
+Lire x 
+Ecrire   x, ‘’ a la puissance ‘’,n, ‘’ est : ‘’ ,pow(x,n)
+
+// version 2 	
+	puiss  <-  1
+	Pour i allant de 1 à n  Faire 
+		puiss <-  puiss * x
+	Finpour
+Ecrire ‘’ x, ‘’ a la puissance ,n, ‘’ est : ‘’ puiss  

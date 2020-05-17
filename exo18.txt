@@ -1,0 +1,29 @@
+Exercice 18: Faire un programme qui calcule et affiche le PPCM de deux entiers saisis au clavier.
+var a,b,x,y,r : entier 
+
+DEBUT
+
+   REPETER 
+      AFFICHER  " entrer deux valeur " 
+   lire a,b 
+   JUSQU'A ( a >= 0 ET b >= 0 )  
+
+   SI ( a > b ) ALORS 
+      x = b  
+      r = a mod b  
+      SINON 
+      x = a 
+      r = b mod a
+   FINSI
+
+      TANQUE r != 0 
+         y = x     
+         x = r      
+         r = y mod x  
+      
+      FINTANQUE 
+
+   AFFICHER " le pgcd de ",a ," et", b ,"est : "x
+
+   AFFICHER " le ppcm de ",a ," et", b ,"est : "(a * b ) div x
+FIN

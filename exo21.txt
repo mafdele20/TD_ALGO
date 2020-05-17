@@ -1,0 +1,42 @@
+Exercice 21 : Ecrire un algorithme mettant en œuvre le jeu suivant entre deux joueurs : Le premier utilisateur saisi un entier que le second doit deviner. Pour cela, il a le droit à autant de tentatives qu'il souhaite. A chaque échec, le programme lui indique si l'entier est plus grand ou plus petit que sa proposition. Un score est affiché lorsque l'entier est trouvé.
+
+Var : a, n, t : entiers
+
+Début 
+t=0
+choix = 0
+score = 0 
+  ECRIRE "entre le nombre  à deviner "
+       lire a
+
+TANQUE ( choix != 2)
+
+   ECRIRE "deviné le nombre "
+       lire (n)
+      t <- t + 1
+  Si n > a ALORS
+
+     ECRIRE "le nombre cherché est plus petit "
+
+    SINON SI  n < a ALORS
+      ECRIRE  " le nombre cherché plus grand »)
+        SINON 
+            score = score +1
+                ECRIRE  "Vous avez trouvé le nombre et votre score est :",score," sur" ,t, "tentatives"
+ REPETER
+       ECRIRE  "voulez vous continué 
+                        1 : oui
+                         2 : non "
+                    LIRE  choix
+JUSQU’A ( choix = 1 ou choix = 2) 
+ SI ( choix = 1)
+                 ECRIRE "Entrer le nombre à deviné "
+                 lire a
+       SINON 
+                Choix = 2
+   FINSI  
+    FINSI  
+   FINSI  
+
+FINTANQUE
+FIN

@@ -117,6 +117,7 @@ somme <- somme + val     // 0 <- 0 + 5
 Finpour
 Afficher ‘’ la somme des 5 valeurs est : ‘’, somme
 Fin
+
 Exo 6 : 
 Debut 
 Var x1, y1, x2, y2 : reel 
@@ -125,6 +126,7 @@ Var x1, y1, x2, y2 : reel
  Ecrire ‘’ entrer les coordonnées du point B ‘’ 
   Lire  x2, y2
 Ecrire ‘’ la distance entre A et B est ‘’, sqrt((x1 – x2)2  + (y1 – y2)2)
+
 Exo : 7 
 Var  montant, billet20, billet10, billet5, piece2, piece1 , rest1,rest2,rest3,rest4 : reel 
 
@@ -282,6 +284,7 @@ JUSQU’A ( nbr > 0)
                          ECRIRE nbr,’’ n’est pas un nombre parfait ‘’
              FINSI
 FIN
+
 Exo 13 :  
 Var jour, mois, annee : entier 
 
@@ -321,70 +324,74 @@ Ecrire un algorithme qui demande un nombre de départ, et qui calcule la somme d
 Var nbr, somme ,i : entier 
 
 DEBUT 
-REPETER
-    AFFICHER ‘’ Entrer un nombre ‘’ 
-      Lire  nbr
-JUSQU’A
-somme  <- 0
- POUR i allant de 1 a nbr FAIRE
-      somme  <- somme + i
-FINPOUR
-AFFICHER ‘’ La somme de 1 à ‘’,nbr ,’’ est : ‘’ somme 
-
+   REPETER
+      AFFICHER ‘’ Entrer un nombre ‘’ 
+         Lire  nbr
+   JUSQU’A
+   somme  <- 0
+   POUR i allant de 1 a nbr FAIRE
+         somme  <- somme + i
+   FINPOUR
+   AFFICHER ‘’ La somme de 1 à ‘’,nbr ,’’ est : ‘’ somme 
+FIN
 
 Exercice 16 : Faire un programme qui calcule et affiche la division de a par b par soustractions successives
 
 Exercice 17: Faire un programme qui calcule le PGCD de deux nombres saisis au clavier en utilisant l'astuce suivante: soustrait le plus petit des deux entiers du plus grand jusqu'à ce qu'ils soient égaux.
 var a,b,x,y,r : entier 
+DEBUT
+   REPETER 
+      AFFICHER  " entrer deux valeur " 
+   lire a,b 
+   JUSQU'A ( a >= 0 ET b >= 0 )  
 
-REPETER 
-   AFFICHER  " entrer deux valeur " 
-lire a,b 
-JUSQU'A ( a >= 0 ET b >= 0 )  
+   SI ( a > b ) ALORS   // 84 60
+      x = b    //   x =    60
+      r = a mod b  // r = 24
+      SINON 
+      x = a 
+      r = b mod a
+   FINSI
 
- SI ( a > b ) ALORS   // 84 60
-   x = b    //   x =    60
-   r = a mod b  // r = 24
-    SINON 
-     x = a 
-     r = b mod a
- FINSI
+      TANQUE r != 0 
+         y = x   //   60    24
+         x = r    //  24     12
+         r = y mod x  //  12    12  0
+      
+      FINTANQUE 
 
-    TANQUE r != 0 
-        y = x   //   60    24
-        x = r    //  24     12
-        r = y mod x  //  12    12  0
-   
-    FINTANQUE 
-
-AFFICHER " le pgcd de ",a ," et", b ,"est : "x
+   AFFICHER " le pgcd de ",a ," et", b ,"est : "x
+FIN
 
 Exercice 18: Faire un programme qui calcule et affiche le PPCM de deux entiers saisis au clavier.
 var a,b,x,y,r : entier 
 
-REPETER 
-   AFFICHER  " entrer deux valeur " 
-lire a,b 
-JUSQU'A ( a >= 0 ET b >= 0 )  
+DEBUT
 
- SI ( a > b ) ALORS 
-   x = b  
-   r = a mod b  
-    SINON 
-     x = a 
-   r = b mod a
- FINSI
+   REPETER 
+      AFFICHER  " entrer deux valeur " 
+   lire a,b 
+   JUSQU'A ( a >= 0 ET b >= 0 )  
 
-    TANQUE r != 0 
-        y = x     
-        x = r      
-        r = y mod x  
-   
-    FINTANQUE 
+   SI ( a > b ) ALORS 
+      x = b  
+      r = a mod b  
+      SINON 
+      x = a 
+      r = b mod a
+   FINSI
 
-AFFICHER " le pgcd de ",a ," et", b ,"est : "x
+      TANQUE r != 0 
+         y = x     
+         x = r      
+         r = y mod x  
+      
+      FINTANQUE 
 
-AFFICHER " le ppcm de ",a ," et", b ,"est : "(a * b ) div x
+   AFFICHER " le pgcd de ",a ," et", b ,"est : "x
+
+   AFFICHER " le ppcm de ",a ," et", b ,"est : "(a * b ) div x
+FIN
 
 Exercice 19 : Ecrire l’algorithme qui affiche la somme des prix d'une suite d'articles en CFA (entiers) saisies par l'utilisateur et se terminant par zéro.
 Type tab : Tableau [ 1    10 ] : entier
@@ -422,6 +429,7 @@ POUR i allant de 1 à 10  FAIRE
               FINSI
  FINPOUR
 FIN 
+
 Exercice 21 : Ecrire un algorithme mettant en œuvre le jeu suivant entre deux joueurs : Le premier utilisateur saisi un entier que le second doit deviner. Pour cela, il a le droit à autant de tentatives qu'il souhaite. A chaque échec, le programme lui indique si l'entier est plus grand ou plus petit que sa proposition. Un score est affiché lorsque l'entier est trouvé.
 
 Var : a, n, t : entiers
@@ -464,6 +472,44 @@ JUSQU’A ( choix = 1 ou choix = 2)
 
 FINTANQUE
 FIN
+
+Exercice 22 : On se propose de saisir N entiers différents entre 1 et 100 (N étant un entier naturel compris entre 10 et 50) puis afficher la plus longue séquence croissante tout en précisant la position du premier nombre de cette séquence.
+Exemple : Pour N=15
+ 1  2  3  1  2  3  4  5  6  7  8  2  3  4  5 
+Le programme affiche :
+La plus longue séquence est 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 *   qui débute à la position 4  et elle est de longueur 7
+          Type  Tab : tableau [1……….N]  entier
+	var     i, long_seq , long_max, position, seq_precn, N : entier
+DEBUT
+            REPETER
+		Ecrire " Entrer un nombre entier compris entre 10 et 50 "
+		Lire (N) ;
+            JUSQU’A (N >10 ou N < 50)
+             POUR (i  1 à N) faire
+                       REPETER 
+	         	        Ecrire  " Entrer un nombre entier compris entre 1 et 100 "
+                                        Lire (Tab[i]) ;
+                      JUSQU’A (Tab[i]  > 1 ou Tab[i]  < 100)
+  FINPOUR
+	position <- 0 ;  
+               max_seq <- 0 ; 
+               seq_prec <- 0
+	long-seq <- 1 ;
+	POUR (i  1 à N) faire
+		 SI (Tab[i] < = Tab [i + 1] ALORS      
+                                long-seq  <- long-seq +1 ;     
+                              SINON          
+                                       SI (max_seq < long_seq) ALORS  
+ 				max_seq  <- long_seq ; 
+                                             seq_prec <- seq_prec + long_seq ;
+				position <- seq_prec - long_seq + 1
+                                         FINSI
+		            long_seq <- 1 ; 
+                            FINSI
+              FINPOUR
+FIN
+
+
 Exercice 24: Nombre secret : écrire un programme qui demande à l’utilisateur 1 d’entrer un nombre et à l’utilisateur 2 de le trouver en affichant, à chaque tentative, « trop grand » si le nombre entré est plus grand que le nombre secret, « trop petit » sinon. Le programme s’arrête quand l’utilisateur 2 a trouvé le nombre secret.
 Var : a, n, t : entiers
 

@@ -1,0 +1,20 @@
+Exo 12 : 
+VAR nbr , i , parfait, diviseur : entier
+DEBUT 
+    REPETER 
+        AFFICHER ‘’ Entrer un nombre ‘’	
+            SAISIR nbr 
+    JUSQU’A ( nbr > 0) 
+     diviseur  <- 0 
+       POUR i allant de 1 a nbr -1 FAIRE 
+               SI ( nbr mod i = 0) ALORS 
+                       diviseur <- diviseur + i 
+               FINSI 
+       FINPOUR
+
+             SI (diviseur = nbr) ALORS 
+                ECRIRE nbr,’’ est un nombre parfait ‘’
+                    SINON 
+                         ECRIRE nbr,’’ n’est pas un nombre parfait ‘’
+             FINSI
+FIN

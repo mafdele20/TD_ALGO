@@ -1,0 +1,26 @@
+Exercice 26 : Faire un programme qui saisit une suite de nombre et qui dit les si les nombres saisis sont dans l’ordre croissant ou décroissant ou quelconque.
+
+const N =10 
+type tab = tableau [1         N ] : reel 
+var i : entier
+DEBUT  
+   POUR i allant de 1 à N FAIRE 
+          LIRE tab[i] 
+  FINPOUR 
+croissant < - FAUX
+decroissant < - FAUX
+  POUR i allant de 1 à N faire
+       SI ( tab [i] < tab [i] + 1) ALORS
+            croissant < - vrai
+          SINON 
+               decroissant  < - faux
+       FINSI
+   FINPOUR 
+SI ( croissant = vrai ) ALORS
+     ECRIRE  " la suite de saisi est croissante "
+ FINSI
+  SINON SI (decroissant = vrai ) ALORS
+     ECRIRE  " la suite de saisi est decroissante "
+       SINON
+                   ECRIRE  " la suite de saisi n’est ni croissante  ni decroissante "
+ FINSI

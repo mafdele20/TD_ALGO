@@ -1,0 +1,33 @@
+Exercice 11 :
+Ecrire un algorithme calculatrice permettant la saisie du premier entier (a) de l'opération ( + ou – ou * ou / : sont des caractères) et du deuxième entier (b) et qui affiche le résultat.
+
+Var a, b , somme, difference, multi, resultat  : entier
+
+operateur : caractere 
+
+DEBUT 
+	
+    AFFICHER ("saisir le premier nombre") ;
+    LIRE a
+
+    AFFICHER ("saisir le deuxième nombre") ;
+    LIRE b
+
+    REPETER
+    ECRIRE "Choisir l’operateur "
+    JUSQU’A (operateur  = '-' OU operateur  = '+' OU operateur  = '*' OU operateur  = '/') 
+
+    SI (operateur = '-' ALORS
+    difference ← a - b 
+    FINSI
+    SI (operateur = '+') ALORS
+    somme ← a + b ;
+    FINSI
+    SI (operateur = '*') ALORS
+    multi ← a * b ;
+    FINSI
+    SI (operateur = '/' ET b!=0) ALORS
+    resultat ← a div b ;
+    FINSI
+    AFFICHER (" le resultat est : ",result);
+FIN

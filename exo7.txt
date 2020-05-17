@@ -1,0 +1,20 @@
+
+Exo : 7 
+Var  montant, billet20, billet10, billet5, piece2, piece1 , rest1,rest2,rest3,rest4 : reel 
+
+Debut 
+Repeter 
+  Afficher ‘’ entrer un montant ‘’
+    Lire montant
+Jusqu’à (montant > 0) 
+rest <- 0
+
+//215
+billet20  <- ( montant div  20)
+rest <- ( montant mod  20)
+billet10  <- ( rest  div  10)
+rest <- ( rest mod  10)
+billet5 <- ( rest  div  5)  
+rest <- ( rest mod  5)
+priece2 = ( rest  div  2)
+piece1 <- ( rest mod  2)   

@@ -1,0 +1,14 @@
+Exercice 2:
+ 
+var surf ,pi ,prm , r = reel 
+Debut 
+Repeter 
+           Ecrire ‘’entrer le rayon‘’ ;
+Lire r ;
+Jusqu’à (r > 0)
+pi = 4 *( atan  * 1)
+
+       prm  <-  r  * pi * 2
+
+surf  <-  pi * sqrt(r)
+Fin
