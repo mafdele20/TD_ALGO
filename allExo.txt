@@ -337,6 +337,32 @@ FIN
 
 Exercice 16 : Faire un programme qui calcule et affiche la division de a par b par soustractions successives
 
+var a,b,ptit,grand, result: entier 
+
+DEBUT
+
+    REPETER 
+    AFFICHER  " entrer deux valeur "                                             
+        lire a,b 	
+    JUSQU'A (a >  0 ET b > 0 )             
+    SI ( a > b ) ALORS  
+    ptit = b                                                                                               
+    rest = a -  b     
+    result ++       
+        SINON 	      
+        result  = result      
+         rest  = b – a	 
+        result++	 
+
+    FINSI             
+    TANQUE (rest >= petit)                                                 
+            rest = grand – petit      
+            grand = grand – rest       
+            result++                  
+    FINTANQUE
+FIN
+
+
 Exercice 17: Faire un programme qui calcule le PGCD de deux nombres saisis au clavier en utilisant l'astuce suivante: soustrait le plus petit des deux entiers du plus grand jusqu'à ce qu'ils soient égaux.
 var a,b,x,y,r : entier 
 DEBUT

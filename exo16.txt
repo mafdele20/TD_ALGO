@@ -1,0 +1,25 @@
+Exercice 16 : Faire un programme qui calcule et affiche la division de a par b par soustractions successives
+var a,b,ptit,grand, result: entier 
+
+DEBUT
+
+    REPETER 
+    AFFICHER  " entrer deux valeur "                                             
+        lire a,b 	
+    JUSQU'A (a >  0 ET b > 0 )             
+    SI ( a > b ) ALORS  
+    ptit = b                                                                                               
+    rest = a -  b     
+    result ++       
+        SINON 	      
+        result  = result      
+         rest  = b – a	 
+        result++	 
+
+    FINSI             
+    TANQUE (rest >= petit)                                                 
+            rest = grand – petit      
+            grand = grand – rest       
+            result++                  
+    FINTANQUE
+FIN

@@ -20,8 +20,8 @@ DEBUT
     SI ( crx = N )
          ECRIRE ‘’ Les valeurs sont saisies dans l’ordre croissant ‘’
       SINON SI ( decrx = N )
-                    ECRIRE ‘’ Les valeurs sont saisies dans l’ordre decroissant ‘’
+                   ECRIRE ‘’ Les valeurs sont saisies dans l’ordre decroissant ‘’
         SINON 
-                                       ECRIRE ‘’ Les valeurs sont saisies dans l’ordre quelconque ‘’
+                   ECRIRE ‘’ Les valeurs sont saisies dans l’ordre quelconque ‘’
      FINSI
 FIN
