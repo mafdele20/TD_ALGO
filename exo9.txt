@@ -4,16 +4,17 @@ DEBUT
     REPETER
         Ecrire ‘’ Entrer l’heure de depart’’
         Saisir hh1,mn1,ss1
-    JUSQU’A (hh1 > 0 et hh1 < 24 et mn1 > 0 et mm1 < 60 et ss1 > 0 et ss1 < 60 )
+    JUSQU’A (hh1 > 0 et hh1 < 24 et mn1 > 0 et mn1 < 60 et ss1 > 0 et ss1 < 60 )
 
     REPETER
         Ecrire ‘’ Entrer l’heure d’arrivé’’
         Saisir hh2,mn2,s2
-    JUSQU’A (hh2 > 0 ET hh2 < 24 ET hh2 ET mn2 > 0 ET mm2 < 60 ET ss2  > 0 ET ss2 < 60 )
+    JUSQU’A (hh2 > 0 ET hh2 < 24 ET hh2 ET mn2 > 0 ET mn2 < 60 ET ss2  > 0 ET ss2 < 60 )
    nbrssD  <- hh1 *60 *60 + mm1 * 60 + ss1 
    nbrssA  <- hh2 *60 *60 + mm1 * 60 + ss1
     //version a
  Si( hh2 >  hh1 )
+     NbrssA  <- NbrssA + 24 3600
     difference  <- NbrssA  - NbrssD
     dhh  <- difference   div 60  * 60
     reste <- difference   mod 60  * 60

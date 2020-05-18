@@ -9,7 +9,7 @@ Var i , j : entier
 DEBUT 
       POUR i allant de 1 à 10 FAIRE 
            POUR j allant de 1 à i FAIRE 
-                    Lire i 
+                    ECFRIRE i 
           FINPOUR 
        FINPOUR
 FIN

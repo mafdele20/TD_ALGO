@@ -1,6 +1,6 @@
 
 Exo : 7 
-Var  montant, billet20, billet10, billet5, piece2, piece1 , rest1,rest2,rest3,rest4 : reel 
+Var  montant, billet20, billet10, billet5, piece2, piece1 , rest : reel 
 
 Debut 
 Repeter 
@@ -18,3 +18,11 @@ billet5 <- ( rest  div  5)
 rest <- ( rest mod  5)
 priece2 = ( rest  div  2)
 piece1 <- ( rest mod  2)   
+
+ECRIRE("Apres décomposition de :  ",montant,"euro on a ")
+   ECRIRE(billet20, "de billets de 20 ") 
+    ECRIRE(billet10, "de billets de 10 ") 
+    ECRIRE(billet5, "de billets de 5 ") 
+    ECRIRE(piece2, "de piece de 2 ") 
+    ECRIRE(piece1, "de piece de 1 ") 
+fin

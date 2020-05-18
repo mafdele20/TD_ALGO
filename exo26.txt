@@ -10,10 +10,10 @@ DEBUT
      crx <- 1
      decrx <- 1
   POUR i allant de 1 à N FAIRE
-       SI (tab [i] < tab [i] + 1) ALORS
-           crx++
-          SINON SI (tab [i] >tab [i] + 1) ALORS
-            decrx++
+       SI (tab [i] <= tab [i] + 1) ALORS
+           crx <- crx + 1
+          SINON SI (tab [i] >= tab [i] + 1) ALORS
+            decrx <- decrx + 1
           FINSI
      FINSI
    FINPOUR 

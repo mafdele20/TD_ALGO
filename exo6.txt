@@ -7,3 +7,5 @@ Var x1, y1, x2, y2 : reel
  Ecrire ‘’ entrer les coordonnées du point B ‘’ 
   Lire  x2, y2
 Ecrire ‘’ la distance entre A et B est ‘’, sqrt((x1 – x2)2  + (y1 – y2)2)
+
+fin

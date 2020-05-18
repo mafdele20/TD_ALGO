@@ -20,8 +20,8 @@ Debut
    lire R1 ;   
   Ecrire ‘’ entre la resistance R2 ‘’ 
    lire R2;   
-  Ecrire ‘’ entre la resistance R2 ‘’ 
-   lire R2 ;   
+  Ecrire ‘’ entre la resistance R3 ‘’ 
+   lire R3 ;   
 rserie <- R1 + R2 +R3
 rpara <- (R1 *R2 *R3) / (R1 * R2 + R2 * R3 + R1 * R3)
 Repeter 

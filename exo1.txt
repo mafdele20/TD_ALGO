@@ -3,15 +3,15 @@ Var a ,b,rt,qe : entrier
  qr : reel 
 
 REPETER 
-       Ecrire ‘’entrer un nombre ‘’ 
+       Ecrire ‘’entrer le dividende  ‘’ 
 Lire a 
 JUSQU'A (a > 0)
 
 REPETER 
-       Ecrire  ‘’entrer un nombre ‘’ 
+       Ecrire  ‘’entrer le diviseur ‘’ 
 Lire b 
 
-JUSQU'A (b > 0)
+JUSQU'A (b < a)
 
 Rt <- a mod b
 qe <-  a div b
