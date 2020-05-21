@@ -1,4 +1,5 @@
 Exo 13 :  
+DEBUT
 Var jour, mois, annee : entier 
 
      AFFICHER ‘’ entre le jour , le mois et l’année ‘’ 
@@ -10,3 +11,4 @@ SI ( jour < 1 ) ou (jour > 31 ) ou (mois < 1 ou mois >12)
 Sinon 
 AFFICHER ‘’ la date saisi est correct ‘’
 Finsi
+FIN

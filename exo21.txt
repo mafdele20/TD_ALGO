@@ -20,7 +20,7 @@ TANQUE ( choix != 2)
      ECRIRE "le nombre cherché est plus petit "
 
     SINON SI  n < a ALORS
-      ECRIRE  " le nombre cherché plus grand »)
+      ECRIRE  " le nombre cherché plus grand ")
         SINON 
             score = score +1
                 ECRIRE  "Vous avez trouvé le nombre et votre score est :",score," sur" ,t, "tentatives"

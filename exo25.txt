@@ -22,9 +22,10 @@ DEBUT
 POUR i allant de 1 à nbr – 1 FAIRE 
           SI (nbr mod i = 0) ALORS 
                  cpt = cpt +1 
-          FIN   
+          FINSI
+
+FINPOUR 
           SI ( cpt = 1 ) ALORS 
                ECFRIRE " le nombre ", nbr, "est premier "
           FINSI 
-
-FINPOUR 
+FIN
